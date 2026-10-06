@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#000000">
+<title>West Bengal & India Geography Master Mock Test — 150 Questions</title>
+<style>
+:root{--bg:#000;--panel:#090909;--panel2:#111;--line:#292929;--text:#fff;--muted:#aaa;--green:#18e76b;--red:#ff3152;--gold:#ffd45a;--blue:#5f8cff}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow:hidden}
+body.light{--bg:#f4f6fa;--panel:#fff;--panel2:#f1f3f7;--line:#d8dce5;--text:#111;--muted:#626a78;--gold:#8b5d00;--blue:#315fce}
+button,input{font:inherit}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hidden{display:none!important}
+.topbar{position:fixed;left:0;right:0;top:0;height:68px;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:8px 12px;background:rgba(0,0,0,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body.light .topbar{background:rgba(255,255,255,.95)}
+.leftbox{justify-self:start}
+.rightbox{justify-self:end;display:flex;align-items:center;gap:8px}
+.centerbox{justify-self:center;text-align:center;min-width:100px}
+.themeBtn,.adminBtn,.correctBtn{border:1px solid #444;border-radius:11px;padding:9px 12px;background:#111;color:#fff;font-weight:1000;letter-spacing:.03em}
+body.light .themeBtn,body.light .adminBtn,body.light .correctBtn{background:#fff;color:#111;border-color:#c4c9d3}
+.adminBtn{background:var(--gold);color:#000;border-color:var(--gold)}
+.correctBtn{display:block;margin:auto;background:#0b301b;border-color:#1e9c52;color:#69ff9d;min-width:110px}
+.timer{margin-top:3px;font-variant-numeric:tabular-nums;font-size:18px;font-weight:1000;letter-spacing:.04em}
+.timer.warn{color:#fff!important;animation:timerBlink .48s steps(2,start) infinite!important;transform:scale(1.32);text-shadow:0 0 6px #fff,0 0 16px var(--red),0 0 32px var(--red),0 0 48px #ff8a00;font-size:clamp(24px,4vw,34px)!important;letter-spacing:.08em}@keyframes timerBlink{0%,100%{opacity:1;filter:brightness(1.2);transform:scale(1.32)}50%{opacity:.28;filter:brightness(2.3);transform:scale(1.5)}}
+.screen{position:fixed;inset:68px 0 0;display:flex;align-items:center;justify-content:center;padding:18px}
+.startCard{width:min(560px,92vw);background:linear-gradient(180deg,#101010,#070707);border:1px solid #2a2a2a;border-radius:24px;padding:30px;box-shadow:0 25px 90px rgba(0,0,0,.65)}
+body.light .startCard{background:#fff;border-color:#d8dce5;box-shadow:0 20px 60px rgba(0,0,0,.10)}
+.brand{margin:0;text-align:center;font-size:clamp(30px,6vw,46px);font-weight:1000;letter-spacing:.10em}
+label{display:block;margin:28px 0 9px;font-weight:1000;font-size:18px}
+.name{width:100%;height:56px;border:1px solid #3a3a3a;border-radius:14px;background:#050505;color:#fff;padding:0 16px;outline:none;font-weight:800;font-size:18px}
+body.light .name{background:#f8f9fc;color:#111;border-color:#cfd4de}
+.name:focus{border-color:var(--blue)}
+.startBtn{width:100%;height:58px;margin-top:12px;border:0;border-radius:14px;background:#fff;color:#000;font-weight:1000;font-size:18px;letter-spacing:.04em}
+.exam{position:fixed;inset:68px 0 0;height:calc(100dvh - 68px);padding:10px 12px}
+.examInner{height:100%;max-width:1100px;margin:auto;display:flex;flex-direction:column;min-height:0}
+.progress{height:58px;color:var(--muted);font-size:13px;font-weight:1000;padding:0 3px;display:block}
+.progressTop{height:28px;display:flex;align-items:center;justify-content:space-between;gap:8px;line-height:1.05}
+.progressTop span{font-weight:1000}
+.progressTrack{height:4px;width:100%;border-radius:999px;background:#ff3152;border:1px solid rgba(255,49,82,.65);overflow:hidden;box-shadow:inset 0 0 5px rgba(0,0,0,.35),0 0 5px rgba(255,49,82,.14)}
+.progressFill{height:100%;width:0%;background:#18e76b;border-radius:999px;transition:width .35s ease;box-shadow:0 0 7px rgba(24,231,107,.55)}
+.progressFill.done{background:#18e76b;box-shadow:0 0 9px rgba(24,231,107,.7)}
+.qcard{flex:1;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(14px,2.2vh,22px);display:flex;flex-direction:column;box-shadow:0 18px 70px rgba(0,0,0,.35)}
+.qnum{color:var(--gold);font-weight:1000;font-size:15px;margin-bottom:7px}
+.question{font-size:clamp(16px,2.3vh,21px);line-height:1.38;font-weight:800;max-width:1000px}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:clamp(12px,2vh,18px)}
+.opt{min-height:54px;border:1px solid #333;border-radius:13px;background:var(--panel2);color:var(--text);padding:11px 13px;text-align:left;display:flex;gap:10px;align-items:flex-start;font-weight:750;line-height:1.28;font-size:clamp(14px,1.9vh,17px);transition:.12s}
+.opt:active{transform:scale(.995)}
+.opt.selected{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue) inset}
+.opt.correct{background:#123e23;border-color:#18e76b;color:#70ff9f;box-shadow:0 0 0 1px #18e76b inset}
+.opt.wrong{background:#470b17;border-color:#ff3152;color:#ff91a4;box-shadow:0 0 0 1px #ff3152 inset}
+.letter{font-weight:1000;min-width:24px}
+.feedback{min-height:26px;margin-top:7px;font-size:13px;font-weight:1000;max-height:30vh;overflow-y:auto;padding-right:4px;line-height:1.5;flex-shrink:0}
+.feedback.ok{color:var(--green)} .feedback.bad{color:var(--text)}
+.wrong-title{color:var(--red);font-size:16px;font-weight:1000;margin-bottom:6px}.explain{color:var(--green);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;max-height:30vh;overflow-y:auto;line-height:1.6;font-weight:750}
+.timer.warn{color:#fff;background:linear-gradient(135deg,#ff1744,#ff6b00,#ffd400,#ff1744);background-size:300% 300%;padding:6px 14px;border-radius:14px;font-size:clamp(22px,4vw,34px);line-height:1;box-shadow:0 0 10px #ff1744,0 0 24px #ff6b00,0 0 42px rgba(255,212,0,.8);text-shadow:0 0 7px #fff,0 0 16px #ff1744;animation:timerGlow 1.15s ease-in-out infinite,timerGradient 2s linear infinite;transform:scale(1.12)}
+@keyframes timerGlow{0%,100%{opacity:1;transform:scale(1.12)}50%{opacity:.55;transform:scale(1.22)}}
+@keyframes timerGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.actions{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;flex-shrink:0;background:var(--panel)}
+.next{width:min(240px,100%);height:54px;border:2px solid #fff;border-radius:14px;background:#fff;color:#000;font-weight:1000;font-size:18px;transition:.12s;flex-shrink:0}.next.answer-correct{background:#18e76b;border-color:#18e76b;color:#000;box-shadow:0 0 14px rgba(24,231,107,.45)}.next.answer-wrong{background:#ff3152;border-color:#ff3152;color:#fff;animation:shake .45s ease-in-out 0s 2;box-shadow:0 0 14px rgba(255,49,82,.45)}@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.next:disabled{opacity:.35;cursor:not-allowed}
+.next.tap-vibrate{animation:buttonVibrate .34s linear}
+@keyframes buttonVibrate{0%,100%{transform:translateX(0) scale(1)}20%{transform:translateX(-6px) scale(1.02)}40%{transform:translateX(6px) scale(1.02)}60%{transform:translateX(-5px) scale(1.02)}80%{transform:translateX(4px) scale(1.01)}}
+.revisionBox{margin-top:18px;padding:16px;border:1px solid #ff3152;border-radius:16px;background:linear-gradient(135deg,rgba(255,49,82,.12),rgba(255,212,90,.08));box-shadow:0 0 24px rgba(255,49,82,.12)}
+.revisionTitle{font-size:18px;font-weight:1000;color:#ffd45a}
+.revisionInfo{margin-top:5px;color:var(--muted);font-weight:750;line-height:1.45}
+.revisionBtn{margin-top:11px;width:100%;min-height:54px;border:2px solid #ffd45a;border-radius:13px;background:linear-gradient(90deg,#5b0010,#9d1230,#5b0010);background-size:200% 100%;color:#fff;font-weight:1000;font-size:17px;box-shadow:0 0 12px rgba(255,49,82,.5);animation:revisionPulse 1.5s ease-in-out infinite}
+@keyframes revisionPulse{0%,100%{box-shadow:0 0 10px rgba(255,49,82,.45)}50%{box-shadow:0 0 26px rgba(255,212,90,.8)}}
+.result,.admin{position:fixed;inset:68px 0 0;overflow:auto;padding:18px}
+.resultCard,.adminCard{width:min(1150px,100%);margin:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px}
+.resultTitle{text-align:center;font-weight:1000;letter-spacing:.08em;margin:0}
+.candidate{text-align:center;color:var(--muted);font-weight:800;margin-top:7px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:18px}
+.stat{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:13px}
+.stat small{display:block;color:var(--muted);font-weight:800}
+.stat strong{display:block;font-size:22px;margin-top:4px;font-weight:1000}
+.review{margin-top:20px;display:grid;gap:9px}
+.reviewRow{border:1px solid var(--line);border-radius:13px;padding:13px;background:var(--panel2)}
+.reviewQ{font-weight:900;line-height:1.35}
+.reviewA{margin-top:7px;color:var(--muted);font-size:14px;line-height:1.4}
+.tag{display:inline-block;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:1000;margin-left:5px}
+.ok{background:#123e23;color:#70ff9f} .bad{background:#470b17;color:#ff91a4} .skip{background:#303030;color:#bbb}
+.resultActions,.adminTools{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.resultActions button,.adminTools button{border:1px solid #444;border-radius:11px;padding:11px 13px;background:#111;color:#fff;font-weight:900}
+body.light .resultActions button,body.light .adminTools button{background:#fff;color:#111;border-color:#c4c9d3}
+.danger{border-color:#9d253b!important;color:#ff91a4!important}
+.adminHead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.adminTitle{margin:0;font-weight:1000}
+.tableWrap{overflow:auto;margin-top:16px}
+table{width:100%;border-collapse:collapse;min-width:900px}
+th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{color:var(--muted);font-size:12px}
+.empty{padding:30px;text-align:center;color:var(--muted);font-weight:800}
+.status{margin-top:10px;text-align:center;font-size:12px;font-weight:1000}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1000}
+@media(max-width:700px){
+ .topbar{height:62px;padding:6px 6px;grid-template-columns:auto 1fr auto;gap:4px;overflow:visible}
+ .leftbox{min-width:0;overflow:visible}
+ .topButtons{gap:4px;flex-wrap:nowrap}
+ .screen,.exam,.result,.admin{inset:62px 0 0}
+ .exam{height:calc(100dvh - 62px);padding:7px 8px}
+ .themeBtn,.adminBtn,.correctBtn{font-size:9px;padding:7px 6px;border-radius:9px;letter-spacing:0}
+ .viewBtn{display:inline-flex!important;visibility:visible!important;opacity:1!important;font-size:8px;padding:7px 5px}
+ .correctBtn{min-width:68px;padding-left:5px;padding-right:5px}
+ .centerbox{min-width:68px}
+ .timer{font-size:15px}
+ .adminBtn{font-size:8px;padding:7px 5px}
+ .startCard{padding:23px}
+ .options{grid-template-columns:1fr;gap:7px}
+ .opt{min-height:49px;padding:9px 11px}
+ .qcard{border-radius:16px;padding:13px}
+ .progress{height:42px;font-size:11px}
+ .progressTop{height:25px}
+ .progressTrack{height:15px}
+ .next{height:52px;width:100%}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .result,.admin{padding:10px}
+}
+@media(max-width:360px){
+ .topbar{padding-left:4px;padding-right:4px;gap:2px}
+ .topButtons{gap:2px}
+ .themeBtn{font-size:8px;padding:6px 4px}
+ .viewBtn{font-size:7px;padding:6px 4px}
+ .adminBtn{font-size:7px;padding:6px 4px}
+ .correctBtn{font-size:8px;min-width:62px}
+ .timer{font-size:14px}
+}
+@media(max-height:620px) and (orientation:landscape){
+ .question{font-size:15px;line-height:1.25}
+ .opt{min-height:42px;font-size:13px;padding:7px 9px}
+ .options{gap:6px;margin-top:7px}
+ .qcard{padding:10px}
+ .next{height:45px}
+}
+@media print{
+ html,body{overflow:visible;background:#fff!important;color:#000!important}
+ .topbar,.resultActions,.adminTools,#fx{display:none!important}
+ .result,.admin{position:static;overflow:visible;padding:0}
+ .resultCard,.adminCard{border:0;box-shadow:none}
+}
+
+.topButtons{display:flex;align-items:center;gap:6px}
+.viewBtn{font-size:10px;padding:7px 9px;white-space:nowrap}
+.viewModeWrap{position:absolute;inset:0;overflow:auto;padding:18px 12px 90px;background:var(--bg)}
+.viewModeInner{width:min(1100px,100%);margin:auto}
+.viewModeHeader{position:sticky;top:0;z-index:4;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;font-weight:1000;display:flex;justify-content:space-between;gap:10px}
+.viewModeHeader span{color:var(--muted);font-size:12px}
+.viewQuestion{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:10px}
+.viewQuestion .question{margin-bottom:10px}
+.viewQuestion .options{margin-top:8px}
+.viewOnlyOpt{pointer-events:none!important;cursor:default!important;opacity:1!important}
+.viewModeExit{position:sticky;bottom:0;width:100%;height:54px;border:2px solid #fff;border-radius:14px;background:#fff;color:#000;font-weight:1000;font-size:17px;margin-top:8px}
+body.light .viewModeExit{border-color:#111}
+@media(max-width:700px){
+  .viewBtn{font-size:9px;padding:7px 7px}
+  .viewModeWrap{padding:10px 8px 76px}
+  .viewModeHeader{font-size:12px;padding:10px}
+  .viewQuestion{padding:13px}
+}
+
+</style>
+
+<style id="revision-banner-style">#revisionBanner{display:none;text-align:center;font-weight:800;font-size:22px;line-height:1.4;margin:12px 0;padding:0;background:none;border:none;box-shadow:none;}
+#revisionBanner.show{display:block}
+.revisionStar{color:red;font-weight:800;animation:revisionBlink 1s step-end infinite;text-shadow:none;background:none;}
+.revisionText{color:#16a34a;font-weight:800;animation:revisionBlink 1s step-end infinite;text-shadow:none;background:none;}
+@keyframes revisionTextBlink{0%,100%{opacity:1;filter:brightness(1.1)}50%{opacity:.22;filter:brightness(2.4)}}
+@keyframes revisionStarBlink{0%,100%{opacity:1;filter:brightness(1.1)}50%{opacity:.18;filter:brightness(2.5)}}</style>
+<style id="revisionTextFix">
+.revisionText{
+  color:#ff0000 !important;
+  font-weight:900 !important;
+  font-size:1.12em !important;
+  text-shadow:none !important;
+  background:none !important;
+  border:none !important;
+  animation:revisionTextBlink 0.8s steps(1,end) infinite !important;
+}
+@keyframes revisionTextBlink{
+  0%,49%{opacity:1;visibility:visible}
+  50%,100%{opacity:0;visibility:hidden}
+}
+</style>
+<style id="REAL_EXAM_LAST10_TIMER_ONLY">
+#timer.real-exam-last10{
+  color:#ff0000 !important;
+  background:transparent !important;
+  background-color:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  animation:realExamLast10Blink 1.8s ease-in-out infinite !important;
+}
+@keyframes realExamLast10Blink{
+  0%,100%{opacity:1}
+  50%{opacity:.45}
+}
+</style>
+
+<style id="LOCK_VIEW_SMOOTHNESS_FIX">
+  #viewScreen{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  #viewScreen .viewModeWrap{
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  #viewScreen .viewQuestion{
+    content-visibility:auto;
+    contain-intrinsic-size:260px;
+  }
+  #viewScreen .viewOnlyOpt{
+    display:flex;
+    width:100%;
+    cursor:default;
+    user-select:text;
+    -webkit-user-select:text;
+  }
+  #viewScreen .viewOnlyOpt:active{transform:none}
+</style>
+
+
+<style id="MOCK_LOCK_SCREEN_STYLE">
+.lockScreen{
+  position:fixed;inset:0;z-index:5000;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;overflow:auto;
+  background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.035),transparent 34%),#000;
+}
+.lockCard{
+  width:min(625px,94vw);padding:38px 30px 34px;text-align:center;
+  border:1px solid #303030;border-radius:30px;
+  background:linear-gradient(180deg,#151515 0%,#090909 100%);
+  box-shadow:0 28px 100px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.lockIcon{
+  width:164px;height:164px;margin:0 auto 25px;border:1px solid #303030;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:78px;
+  background:radial-gradient(circle,#171717,#0b0b0b);
+  box-shadow:0 0 0 1px rgba(255,255,255,.015) inset,0 18px 45px rgba(0,0,0,.55);
+}
+.lockCard h1{margin:0;font-size:clamp(34px,7vw,52px);line-height:1;letter-spacing:.08em;font-weight:1000}
+.lockCard p{margin:18px 0 28px;color:#aaa;font-size:clamp(15px,2.7vw,20px);line-height:1.35;font-weight:800}
+.lockPassword{
+  width:100%;height:64px;border:1px solid #333;border-radius:18px;outline:none;
+  background:#030303;color:#fff;text-align:center;padding:0 18px;
+  font-size:21px;font-weight:900;letter-spacing:.16em;
+}
+.lockPassword::placeholder{color:#858585;opacity:1}
+.lockPassword:focus{border-color:#777;box-shadow:0 0 0 2px rgba(255,255,255,.07)}
+.unlockBtn,.lockedViewBtn{
+  width:100%;height:64px;border-radius:18px;font-weight:1000;font-size:21px;letter-spacing:.02em;
+}
+.unlockBtn{margin-top:17px;border:1px solid #fff;background:#fff;color:#000}
+.lockedViewBtn{margin-top:14px;border:1px solid #3a3a3a;background:#111;color:#fff}
+.unlockBtn:active,.lockedViewBtn:active{transform:scale(.99)}
+.lockError{min-height:24px;margin-top:12px;color:#ff526c;font-size:14px;font-weight:900}
+@media(max-width:700px){
+  .lockScreen{padding:18px}
+  .lockCard{padding:28px 18px 24px;border-radius:25px}
+  .lockIcon{width:142px;height:142px;font-size:68px;margin-bottom:22px}
+  .lockPassword,.unlockBtn,.lockedViewBtn{height:58px;border-radius:16px}
+  .lockPassword{font-size:18px}
+  .unlockBtn,.lockedViewBtn{font-size:18px}
+}
+body.light .lockScreen{background:#f4f6fa}
+body.light .lockCard{background:#fff;border-color:#d8dce5;box-shadow:0 25px 70px rgba(0,0,0,.12)}
+body.light .lockIcon{background:#f7f8fb;border-color:#d8dce5}
+body.light .lockPassword{background:#f8f9fc;color:#111;border-color:#cfd4de}
+body.light .lockedViewBtn{background:#fff;color:#111;border-color:#c4c9d3}
+</style>
+
+
+<style id="LOCKED_VIEW_BUTTON_FIX">
+  #lockScreen .lockedViewBtn{
+    position:relative;
+    z-index:20;
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+  }
+  #lockScreen .lockCard{
+    position:relative;
+    z-index:10;
+  }
+  #viewScreen{
+    pointer-events:auto!important;
+    touch-action:pan-y;
+  }
+</style>
+
+</head>
+<body>
+
+<div id="lockScreen" class="lockScreen">
+  <div class="lockCard">
+    <div class="lockIcon" aria-hidden="true">🔒</div>
+    <h1>LOCKED</h1>
+    <p>Enter password to unlock the mock test</p>
+    <input id="lockPassword" class="lockPassword" type="password"
+           autocomplete="off" inputmode="text" placeholder="PASSWORD"
+           aria-label="Password">
+    <button id="unlockBtn" class="unlockBtn" type="button">UNLOCK</button>
+    <button id="lockedViewBtn" class="lockedViewBtn" type="button">VIEW QUESTIONS</button>
+    <div id="lockError" class="lockError" aria-live="polite"></div>
+  </div>
+</div>
+
+<div id="viewScreen" class="hidden" style="position:fixed;inset:0;z-index:200;background:var(--bg);"></div>
+<canvas id="fx"></canvas>
+
+<header class="topbar">
+  <div class="leftbox"><div class="topButtons"><button id="themeBtn" class="themeBtn" type="button">☀ THEME</button><button id="viewBtn" class="themeBtn viewBtn" type="button">VIEW QUESTIONS</button></div></div>
+  <div class="centerbox">
+    <button id="correctBtn" class="correctBtn" type="button">CORRECT: 0</button>
+    <div id="timer" class="timer">75:00</div>
+  </div>
+  <div class="rightbox"><button id="adminBtn" class="adminBtn" type="button">ADMIN PORTAL</button></div>
+</header>
+
+<section id="start" class="screen">
+  <div class="startCard">
+    <h1 class="brand">MOCK TEST</h1>
+    <label for="candidate">Candidate Name</label>
+    <input id="candidate" class="name" autocomplete="name" spellcheck="false">
+    <button id="startBtn" class="startBtn" type="button">EXAM START</button>
+  </div>
+</section>
+
+<section id="exam" class="exam hidden">
+  <div class="examInner">
+    <div class="progress"><div class="progressTop"><span id="progress"></span><span id="sectionLabel"></span></div><div class="progressTrack"><div id="progressFill" class="progressFill"></div></div></div>
+    <div id="revisionBanner"><span class="revisionStar">★</span> <span class="revisionText">যেগুলি ভুল করলাম</span> <span class="revisionStar">★</span></div><div id="qcard" class="qcard"></div>
+  </div>
+</section>
+
+<section id="result" class="result hidden"></section>
+
+<section id="admin" class="admin hidden">
+  <div class="adminCard">
+    <div class="adminHead">
+      <div><h2 class="adminTitle">CENTRAL SCOREBOARD ADMIN PORTAL</h2></div>
+      <div class="adminTools">
+        <button id="refreshAdmin">REFRESH RESULTS</button>
+        <button id="csvAdmin">DOWNLOAD RESULTS CSV</button>
+        <button id="printAdmin">PRINT / SAVE PDF REPORT</button>
+        <button id="clearAdmin" class="danger">CLEAR ALL RESULTS</button>
+      </div>
+    </div>
+    <div id="adminTable"></div>
+  </div>
+</section>
+
+<script>
+const QUESTIONS=[{"orig":1,"id":1,"text":"একটি বর্গক্ষেত্রের ক্ষেত্রফল 100 বর্গসেমি হলে তার পরিসীমা কত?","options":["30 সেমি","40 সেমি","10 সেমি","25 সেমি"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “40 সেমি”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":2,"id":2,"text":"একটি বর্গক্ষেত্রের ক্ষেত্রফল 100 সেমি হলে, তার কর্ণের দৈর্ঘ্য কত সেমি? [SSC CHSL (10+2) (CBE) 2017]","options":["20","10","10√2","20√2"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “10√2”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":3,"id":3,"text":"একটি বর্গক্ষেত্রের কর্ণের দৈর্ঘ্য 10 সেমি হলে, তার ক্ষেত্রফল কত বর্গসেমি?","options":["50","51","60","65"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “50”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":4,"id":4,"text":"একটি বর্গক্ষেত্রের কর্ণের দৈর্ঘ্য এবং ক্ষেত্রফলের সাংখ্যমান সমান হলে তার পরিসীমার সাংখ্যমান কত?","options":["2√2","8√2","4√2","√2"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “4√2”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":5,"id":5,"text":"একটি বর্গক্ষেত্রের ক্ষেত্রফল (x² + 4x + 4) বর্গ একক হলে, বাহুর দৈর্ঘ্য কত একক?","options":["(4 − x)","(4 + x)","(2 − x)","(2 + x)"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “(2 + x)”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":6,"id":6,"text":"একটি বর্গক্ষেত্রের বাহু দ্বিগুণ করা হলে, ক্ষেত্রফল কতগুণ বৃদ্ধি পাবে?","options":["2 1/2 গুণ","3 গুণ","2 গুণ","4 গুণ"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “4 গুণ”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":7,"id":7,"text":"একটি বর্গক্ষেত্রের পরিসীমা ও কর্ণের অনুপাত কত?","options":["1 : 2√2","1 : √2","√2 : 1","2√2 : 1"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “2√2 : 1”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":8,"id":8,"text":"একটি বর্গক্ষেত্রের কর্ণের দৈর্ঘ্য 16√2 সেমি হলে, তার পরিসীমা কত?","options":["64 সেমি","63 সেমি","62 সেমি","61 সেমি"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “64 সেমি”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":9,"id":9,"text":"একটি বর্গক্ষেত্রের কর্ণ অপর একটি বর্গক্ষেত্রের কর্ণের দ্বিগুণ হলে, তাদের ক্ষেত্রফলের অনুপাত কত? [SSC Matric level 2007]","options":["3 : 2","4 : 1","3 : 1","2 : 1"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “4 : 1”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":10,"id":10,"text":"একটি বর্গক্ষেত্রের বাহুর দৈর্ঘ্য 10 মিটার। তার বাইরের চারদিকে পরিসীমা বরাবর 1 মিটার চওড়া রাস্তার ক্ষেত্রফল কত বর্গমিটার?","options":["47","46","44","45"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “44”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":11,"id":11,"text":"একটি বর্গাকার পার্কের বাহুর দৈর্ঘ্য 20 মিটার। তার বাইরের চারদিকে 2 মিটার চওড়া রাস্তা প্রতি বর্গমিটারে 10 টাকা হিসাবে বাঁধাতে কত টাকা খরচ হবে?","options":["1762","1761","1750","1760"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “1760”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":12,"id":12,"text":"একটি বর্গাকার বাগানের পরিসীমা 40 মিটার। বাগানটিকে ঘিরে বাইরের চারপাশে 30 সেমি চওড়া একটি পথ, (5 সেমি × 2 সেমি) আকারের মারবেল দিয়ে বাঁধাতে কতগুলি মারবেল লাগবে?","options":["12360টি","12300টি","12350টি","12370টি"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “12360টি”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":13,"id":13,"text":"একটি বর্গাকার পার্কের বাহুর দৈর্ঘ্য 20 মিটার। তার ভেতরের চারপাশে 1 মিটার চওড়া রাস্তার ক্ষেত্রফল কত বর্গমিটার?","options":["73","74","76","75"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “76”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":14,"id":14,"text":"একটি বর্গাকার পার্কের ক্ষেত্রফল 400 বর্গমিটার। তার ভেতরের চারপাশে 2 মিটার চওড়া রাস্তা প্রতি বর্গমিটারে 100 টাকা হিসাবে বাঁধাতে কত টাকা খরচ হবে?","options":["14100","14200","14000","14400"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “14400”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":15,"id":15,"text":"একটি বর্গাকার পার্কের পরিসীমা 100 মিটার। তার ভেতরের চারপাশে 1 মিটার চওড়া পথ আছে। পথটিকে বাঁধাতে (8 সেমি × 4 সেমি) মাপের কতগুলি ইট লাগবে?","options":["30300টি","30200টি","30100টি","30000টি"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “30000টি”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":16,"id":16,"text":"একটি বর্গাকার পার্কের প্রতিটি বাহুর দৈর্ঘ্য 30 মিটার। তার মাঝখান দিয়ে দৈর্ঘ্য ও প্রস্থ বরাবর 1 মিটার চওড়া রাস্তার ক্ষেত্রফল কত বর্গমিটার?","options":["49","59","69","79"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “59”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":17,"id":17,"text":"169 বর্গসেমি ক্ষেত্রফলবিশিষ্ট বর্গাকার বাগানের মাঝখান দিয়ে দৈর্ঘ্য ও প্রস্থ বরাবর 2 সেমি চওড়া রাস্তার ওপর প্রতি বর্গসেমিতে 100 টাকা হিসাবে গাঁদা চারা লাগাতে কত টাকা খরচ হবে?","options":["4830","4820","4810","4800"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “4800”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":18,"id":18,"text":"দুটি বর্গক্ষেত্রের ক্ষেত্রফলের অনুপাত 16 : 1 হলে, তাদের পরিসীমার অনুপাত কত? [CPO (SI) 1998]","options":["16 : 1","4 : 1","1 : 3","3 : 4"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “4 : 1”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":19,"id":19,"text":"দুটি বর্গক্ষেত্রের কর্ণের অনুপাত 2 : 3 হলে, তাদের পরিসীমার অনুপাত কত?","options":["3 : 2","4 : 9","2 : 3","√2 : √3"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “2 : 3”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":20,"id":20,"text":"দুটি বর্গক্ষেত্রের পরিসীমার অনুপাত 3 : 4 হলে, তাদের ক্ষেত্রফলের অনুপাত কত?","options":["3 : 4","16 : 9","√3 : 2","9 : 16"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “9 : 16”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":21,"id":21,"text":"দুটি বর্গক্ষেত্রের একটির কর্ণ অপরটির দ্বিগুণ হলে, তাদের ক্ষেত্রফলের অনুপাত কত? [Asst. Grade 1997]","options":["2 : 3","3 : 1","4 : 1","2 : 1"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “4 : 1”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":22,"id":22,"text":"308 মিটার × 100 মিটার পরিমাপের একটি চাতাল পাকা করতে সর্ববৃহৎ কত মাপের বর্গাকার টালি ব্যবহার করা যাবে?","options":["19 বর্গমিটার","18 বর্গমিটার","17 বর্গমিটার","16 বর্গমিটার"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “16 বর্গমিটার”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":23,"id":23,"text":"একটি আয়তাকার ক্ষেত্রের দৈর্ঘ্য ও প্রস্থ যদি 45 মিটার ও 33 মিটার হয় তবে যত সংখ্যক বৃহত্তম বর্গাকার পাথর দিয়ে ওই ক্ষেত্রকে ঢেকে ফেলা যাবে তা হল— [WBPSC Food SI 2024]","options":["175","165","155","145"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “165”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":24,"id":24,"text":"10 মিটার বাহুবিশিষ্ট বর্গাকার বাগানের বাইরের দিকে সমান পরিসরবিশিষ্ট রাস্তার ক্ষেত্রফল 44 বর্গমিটার। রাস্তাটি কত মিটার চওড়া?","options":["2.5","2","1","1.5"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “1”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":25,"id":25,"text":"144 বর্গমিটার ক্ষেত্রফলবিশিষ্ট বর্গাকার বাগানের ভেতরের দিকে সমান পরিসরবিশিষ্ট রাস্তার ক্ষেত্রফল 80 বর্গমিটার। রাস্তাটি কত মিটার চওড়া?","options":["4","2","1.5","3"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “2”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":26,"id":26,"text":"একটি বর্গাকার ক্ষেত্রের মাঝখান দিয়ে দৈর্ঘ্য ও প্রস্থ বরাবর প্রসারিত 1 মিটার চওড়া রাস্তার ক্ষেত্রফল 39 বর্গমিটার। বর্গক্ষেত্রটির ক্ষেত্রফল কত বর্গমিটার?","options":["390","420","410","400"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “400”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":27,"id":27,"text":"একটি আয়তক্ষেত্রের পরিসীমা 120 মিটার। দৈর্ঘ্য 10 মিটার কমালে এবং প্রস্থ 10 মিটার বাড়ালে এটি একটি বর্গক্ষেত্রে পরিণত হয়। আয়তক্ষেত্রের ক্ষেত্রফল কত?","options":["805 বর্গমিটার","800 বর্গমিটার","810 বর্গমিটার","790 বর্গমিটার"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “800 বর্গমিটার”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":28,"id":28,"text":"900 বর্গসেমি বর্গাকার স্থান বেষ্টন করে এমনভাবে তার দিয়ে একটি আয়তক্ষেত্র গঠন করা হল, যার দৈর্ঘ্য প্রস্থের 5 গুণ। এই আয়তক্ষেত্রের ক্ষেত্রফল কত বর্গসেমি হবে?","options":["540","500","510","505"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “500”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":29,"id":29,"text":"একটি বর্গাকার বাগানের বাইরের চারপাশে 4.5 মিটার চওড়া রাস্তার ক্ষেত্রফল 105.75 বর্গমিটার। প্রতি মিটারে 100 টাকা হিসাবে বাগানের চারপাশে বেড়া দিয়ে ঘিরতে কত টাকা খরচ হবে? [SSC CGL TIER-I (CBE), 2022]","options":["275","600","550","400"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “550”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":30,"id":30,"text":"একটি ঘরের মেঝে আয়তাকার, যার দৈর্ঘ্য 6 মিটার ও প্রস্থ 4 মিটার। ঘরটির উচ্চতা 4 মিটার হলে, তার চার দেয়ালের ক্ষেত্রফল কত বর্গমিটার? [SSC CGL 2020]","options":["60","40","80","50"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “80”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":31,"id":31,"text":"(8 মি × 6 মি × 4 মি) মাপের ঘরের চার দেয়াল 40 সেমি চওড়া কাগজ দিয়ে ঢাকতে প্রতি মিটারে 10 পয়সা হিসাবে কত টাকা খরচ হবে?","options":["35","28","29","30"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “28”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":32,"id":32,"text":"একটি ঘরের দৈর্ঘ্য ও প্রস্থ যথাক্রমে 10 মিটার ও 8 মিটার এবং ঘরটির দেয়ালের ফাঁকা অংশের ক্ষেত্রফল 20 বর্গমিটার। চার দেয়ালে 50 সেমি চওড়া কাগজ লাগাতে প্রতি মিটারে 2 টাকা হিসাবে 640 টাকা খরচ হয়। ঘরটির উচ্চতা কত মিটার?","options":["5.5","6","5","9"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “5”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":33,"id":33,"text":"একটি ঘরের দৈর্ঘ্য 20 মিটার এবং তার প্রস্থ উচ্চতার 4 গুণ। ঘরটির চার দেয়ালকে মুড়তে (9 মি × 4 মি) মাপের 4টি কাগজ লাগে। ঘরটির ভূমির ক্ষেত্রফল কত বর্গমিটার?","options":["390","920","400","320"],"answer":"D","explanation":"প্রদত্ত তথ্য অনুযায়ী 4টি (9 মি × 4 মি) কাগজের মোট ক্ষেত্রফল 144 বর্গমিটার। কিন্তু প্রস্থ = উচ্চতার 4 গুণ ধরলে 2(20+4h)h=144 থেকে h≈2.4244 এবং ভূমির ক্ষেত্রফল≈48.49 বর্গমিটার হয়। অতএব প্রশ্নটির প্রদত্ত অপশনগুলির মধ্যে কোনোটি গাণিতিকভাবে মেলে না। মূল মুদ্রিত উত্তরসূচিতে D দেওয়া হলেও সেটি তথ্যের সঙ্গে সামঞ্জস্যপূর্ণ নয়।","kind":"Mathematics"},{"orig":34,"id":34,"text":"(10 মি × 8 মি × 6 মি) মাপের একটি ঘরে (1/2 মি × 1 মি) মাপের দুটি জানালা ও (2 মি × 1/2 মি) মাপের একটি দরজা আছে। বাকি দেয়ালের ক্ষেত্রফল কত বর্গমিটার?","options":["217","216","214","215"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “214”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":35,"id":35,"text":"(12 মি × 10 মি × 8 মি) মাপের ঘরে (1 1/3 মি × 2 মি) মাপের তিনটি জানালা এবং (2 মি × 1/2 মি) মাপের একটি দরজা আছে। বাকি দেয়ালে মিটার প্রতি 1 টাকা হিসাবে 25 সেমি চওড়া কাগজ লাগাতে কত খরচ হবে?","options":["1374 টাকা","1373 টাকা","1371 টাকা","1372 টাকা"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “1372 টাকা”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":36,"id":36,"text":"একটি বর্গাকার ভূমিবিশিষ্ট বাক্সের মেঝের ক্ষেত্রফল 169 বর্গসেমি এবং বাক্সের উচ্চতা 8 সেমি হলে, তার ভেতর, প্রতি বর্গসেমিতে 10 টাকা হিসাবে রুপোর পাত বসাতে কত টাকা খরচ হবে?","options":["7543","7541","7540","7542"],"answer":"C","explanation":"সঠিক উত্তর: C. বাক্সের ভেতরের মোট পৃষ্ঠতল = তলদেশ + চার পাশ + উপরের তল = 169 + (4×13×8) + 169 = 754 বর্গসেমি। খরচ = 754×10 = 7540 টাকা।","kind":"Mathematics"},{"orig":37,"id":37,"text":"বর্গক্ষেত্রের প্রতিটি বাহু 25% বৃদ্ধি পেলে, ক্ষেত্রফল কত বৃদ্ধি পাবে? [SSC MTS 2022]","options":["62.5%","57.5%","50%","56.25%"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “56.25%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":38,"id":38,"text":"বর্গক্ষেত্রের প্রতিটি বাহু 20% হ্রাস পেলে, ক্ষেত্রফল শতকরা কত হ্রাস পাবে?","options":["10","36","35","40"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “36”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":39,"id":39,"text":"বর্গক্ষেত্রের পরিসীমা 30% বৃদ্ধি পেলে, ক্ষেত্রফল কত বৃদ্ধি পাবে?","options":["15%","60%","65%","69%"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “69%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":40,"id":40,"text":"বর্গক্ষেত্রের পরিসীমা 30% হ্রাস পেলে, ক্ষেত্রফল কত হ্রাস পাবে?","options":["15%","52%","51%","60%"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “51%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":41,"id":41,"text":"বর্গক্ষেত্রের প্রতিটি বাহু 20% বৃদ্ধি পেলে, পরিসীমা কত বৃদ্ধি পাবে?","options":["20%","10%","15%","40%"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “20%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":42,"id":42,"text":"বর্গক্ষেত্রের প্রতিটি বাহু 30% হ্রাস পেলে, পরিসীমা কত হ্রাস পাবে?","options":["10%","15%","30%","35%"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “30%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":43,"id":43,"text":"বর্গক্ষেত্রের ক্ষেত্রফল 20% বৃদ্ধি পেলে, বাহু কত বৃদ্ধি পাবে?","options":["10.23%","7.35%","9.54%","8.25%"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “9.54%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":44,"id":44,"text":"বর্গক্ষেত্রের ক্ষেত্রফল 20% হ্রাস পেলে, বাহু কত হ্রাস পাবে?","options":["9.55%","12.23%","11%","10.56%"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “10.56%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":45,"id":45,"text":"একটি বর্গক্ষেত্রের বাহু 8 সেমি বাড়ালে ক্ষেত্রফল 120 বর্গসেমি বাড়ে। বর্গক্ষেত্রটির প্রাথমিক বাহু কত সেমি? [CDS 2001]","options":["2.5","3.5","4.5","5.5"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “3.5”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":46,"id":46,"text":"দুটি বর্গক্ষেত্রের পরিসীমা 24 সেমি, 32 সেমি। এদের ক্ষেত্রফলের সমষ্টির সমান ক্ষেত্রফলবিশিষ্ট বর্গক্ষেত্রের পরিসীমা কত সেমি? [SSC CGL Exam 2002]","options":["45","40","32","48"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “40”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":47,"id":47,"text":"দুটি বর্গক্ষেত্রের পরিসীমা 40 সেমি ও 32 সেমি। এদের ক্ষেত্রফলের পার্থক্যের সমান ক্ষেত্রফলবিশিষ্ট বর্গক্ষেত্রের পরিসীমা কত সেমি? [SSC CGL Exam 2003]","options":["24","42","40","20"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “24”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":48,"id":48,"text":"দুটি বর্গক্ষেত্রের ক্ষেত্রফলের পার্থক্য 32 বর্গসেমি। বড়োটির বাহু ছোটোটির অপেক্ষা 2 সেমি বেশি হলে, বড়োটির বাহুর দৈর্ঘ্য কত সেমি? [SSC CGL Exam 2003]","options":["7","9","11","16"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “9”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":49,"id":49,"text":"একটি আয়তক্ষেত্র ও একটি বর্গক্ষেত্রের ক্ষেত্রফল সমান। আয়তক্ষেত্রের দৈর্ঘ্য বর্গক্ষেত্রের বাহু থেকে 5 সেমি বেশি এবং প্রস্থ বর্গক্ষেত্রের বাহু থেকে 3 সেমি কম। আয়তক্ষেত্রের পরিসীমা কত সেমি? [SSC CGL Exam 2002, 2005]","options":["17","26","30","34"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “34”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":50,"id":50,"text":"একটি আয়তাকার বাগানের দৈর্ঘ্য ও প্রস্থ 12 মিটার ও 5 মিটার। এর ক্ষেত্রফলের সমান ক্ষেত্রফলবিশিষ্ট বর্গক্ষেত্রের কর্ণের দৈর্ঘ্য কত মিটার? [SSC CGL Exam 2002]","options":["2√30","√13","13","8√15"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “2√30”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":51,"id":51,"text":"একটি আয়তক্ষেত্রের দৈর্ঘ্য 48 মিটার এবং এর দৈর্ঘ্য প্রস্থের 3 গুণ। এর সমান পরিসীমাবিশিষ্ট বর্গক্ষেত্রের ক্ষেত্রফল কত বর্গমিটার? [SSC CGL Exam 2003]","options":["1000","1024","1600","1042"],"answer":"B","explanation":"সঠিক উত্তর: B. সঠিক উত্তরটি হলো “1024”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":52,"id":52,"text":"একটি বর্গক্ষেত্র ও একটি আয়তক্ষেত্রের পরিসীমা সমান। আয়তক্ষেত্রের দৈর্ঘ্য 35 মিটার ও প্রস্থ 15 মিটার। বর্গক্ষেত্রের বাহুর দৈর্ঘ্য কত মিটার? [SSC CGL (CBE) TIER-I 2020]","options":["25","50","20","100"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “25”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":53,"id":53,"text":"2 সেমি, 3 সেমি এবং 6 সেমি বাহুবিশিষ্ট তিনটি বর্গক্ষেত্রের সমন্বয়ে নতুন একটি বর্গাকার ক্ষেত্র তৈরি করা হল। নতুন বর্গক্ষেত্রের বাহুর দৈর্ঘ্য— [WBCS (Prelim.) 2013]","options":["11 সেমি","10 সেমি","7 সেমি","9 সেমি"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “7 সেমি”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":54,"id":54,"text":"একটি বর্গক্ষেত্রের ক্ষেত্রফল 144 বর্গসেমি। এর কর্ণকে বাহু ধরে অতিরিক্ত বর্গক্ষেত্রের পরিসীমা কত সেমি? [SSC MTS 2019]","options":["48√2","48","24√2","24"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “48√2”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":55,"id":55,"text":"একটি ঘরের মেঝে ও ছাদের মোট ক্ষেত্রফল, ঘরটির চার দেয়ালের ক্ষেত্রফলের সমান। ঘরটির দৈর্ঘ্য 21 মিটার এবং প্রস্থ 14 মিটার হলে, ঘরটির উচ্চতা কত মিটার? [SSC CGL TIER-I 2023]","options":["8.4","8.6","8.2","8.8"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “8.4”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":56,"id":56,"text":"একটি আয়তক্ষেত্রের দৈর্ঘ্য 4 সেমি কমালে এবং প্রস্থ 2 সেমি বাড়ালে সেটি একটি বর্গক্ষেত্রে পরিণত হয়। আয়তক্ষেত্রটির ক্ষেত্রফল 16 বর্গসেমি হলে, সেটির পরিসীমা কত সেমি? [SSC CGL TIER-I 2022]","options":["15","24","10","20"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “20”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":57,"id":57,"text":"একটি ঘরের দৈর্ঘ্য, প্রস্থ ও উচ্চতা যথাক্রমে 10 মিটার, 8 মিটার ও 6 মিটার। প্রতি বর্গমিটারে 7.50 টাকা হিসাবে চার দেয়াল ও ছাদ রং করতে কত টাকা খরচ হবে? [SSC CGL TIER-I 2023]","options":["1850","2000","2220","2150"],"answer":"C","explanation":"সঠিক উত্তর: C. সঠিক উত্তরটি হলো “2220”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":58,"id":58,"text":"একটি বর্গক্ষেত্রের কর্ণের দৈর্ঘ্য 8√2 সেমি। যে বর্গক্ষেত্রের ক্ষেত্রফল প্রথমটির তিনগুণ, তার কর্ণের দৈর্ঘ্য কত সেমি? [SSC CGL TIER-I 2022]","options":["8√6","8√3","8√2","8√5"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “8√6”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":59,"id":59,"text":"4 কিমি/ঘণ্টা বেগে একটি বর্গাকার ক্ষেত্র কর্ণ বরাবর অতিক্রম করতে 36 সেকেন্ড সময় লাগে। ক্ষেত্রটির ক্ষেত্রফল কত বর্গমিটার? [RRB NTPC CBT 2022]","options":["800","800/√2","800√2","1600"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “800”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":60,"id":60,"text":"একটি বর্গক্ষেত্রের বাহু, অপর একটি বর্গক্ষেত্রের বাহুর চারগুণ। তাদের পরিসীমার পার্থক্য 48 সেমি হলে, বড় বর্গক্ষেত্রের ক্ষেত্রফল কত বর্গসেমি? [RRB NTPC CBT 2022]","options":["256","289","196","225"],"answer":"A","explanation":"সঠিক উত্তর: A. সঠিক উত্তরটি হলো “256”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":61,"id":61,"text":"দুটি বর্গক্ষেত্রের বাহুর দৈর্ঘ্যের অনুপাত 4 : 3 এবং ক্ষেত্রফলের সমষ্টি 225 বর্গসেমি। ছোট বর্গক্ষেত্রের পরিসীমা কত সেমি? [RRB NTPC CBT 2022]","options":["48","30","40","36"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “36”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"},{"orig":62,"id":62,"text":"একটি বর্গক্ষেত্রের প্রতিটি বাহু 30% বৃদ্ধি করা হলে, ক্ষেত্রফল শতকরা কত বৃদ্ধি পাবে? [WBPSC Food SI, 2024]","options":["9%","30%","60%","69%"],"answer":"D","explanation":"সঠিক উত্তর: D. সঠিক উত্তরটি হলো “69%”। প্রয়োজনীয় সূত্র/সম্পর্ক প্রয়োগ করলে প্রদত্ত চারটি বিকল্পের মধ্যে এটিই সঠিক ফল।","kind":"Mathematics"}]; let DURATION=75*60;
+const DEFAULT_DURATION_SECONDS=75*60;
+const ADMIN_PASSWORD="Bikash@420";
+const RESULTS_KEY="geo_wb_india_150_mock_v1";
+const CENTRAL_SCOREBOARD_URL="https://script.google.com/macros/s/AKfycby_4CKFXC9kKnNZbUE_BWLQBPQlH44kOzR1CpNhfHKNL5AO2Kj5JAeVyRymPeFldVM/exec";
+const CENTRAL_API_TOKEN="CTET_SCOREBOARD_2026_BIKAS_420";
+const CENTRAL_ADMIN_CACHE_KEY="geo_central_scoreboard_admin_cache_v1";
+
+let candidate="",idx=0,answers={},startAt=0,examStartAt=null,timerHandle=null,submitted=false,warningGiven=false;
+let revisionMode=false,revisionQuestions=[],revisionAnswers={},revisionStartAt=0,revisionTimerHandle=null,revisionSubmitted=false,mainResult=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const letter=i=>String.fromCharCode(65+i);
+const answerIndex=L=>L.charCodeAt(0)-65;
+
+function getResults(){try{return JSON.parse(localStorage.getItem(RESULTS_KEY)||"[]")}catch(e){return[]}}
+function saveResults(a){localStorage.setItem(RESULTS_KEY,JSON.stringify(a))}
+
+
+function submitToCentralScoreboard(r){
+  const status=$("centralStatus");
+  const payload={
+    action:"submit",
+    token:CENTRAL_API_TOKEN,
+    candidateName:String(r.candidate||"").trim(),
+    score:Number(r.score)||0,
+    percentage:Number(r.percentage)||0,
+    timeUsedSeconds:Number(r.timeUsed)||0,
+    examStart:r.startExam||examStartAt||"",
+    examEnd:r.completedAt||new Date().toISOString()
+  };
+  const body=JSON.stringify(payload);
+
+  if(status){
+    status.textContent="CENTRAL SCOREBOARD: SENDING RESULT…";
+    status.style.color="var(--green)";
+  }
+
+  // sendBeacon is ideal when the candidate has just submitted the exam.
+  try{
+    if(navigator.sendBeacon){
+      const queued=navigator.sendBeacon(
+        CENTRAL_SCOREBOARD_URL,
+        new Blob([body],{type:"text/plain;charset=UTF-8"})
+      );
+      if(queued){
+        if(status){
+          status.textContent="CENTRAL SCOREBOARD: RESULT SAVED / QUEUED";
+          status.style.color="var(--green)";
+        }
+        return Promise.resolve(true);
+      }
+    }
+  }catch(e){}
+
+  // Reliable fallback when sendBeacon is unavailable.
+  return fetch(CENTRAL_SCOREBOARD_URL,{
+    method:"POST",
+    mode:"no-cors",
+    redirect:"follow",
+    credentials:"omit",
+    headers:{"Content-Type":"text/plain;charset=UTF-8"},
+    body:body,
+    keepalive:true
+  }).then(()=>{
+    if(status){
+      status.textContent="CENTRAL SCOREBOARD: RESULT SENT";
+      status.style.color="var(--green)";
+    }
+    return true;
+  }).catch(()=>{
+    if(status){
+      status.textContent="CENTRAL SCOREBOARD: CONNECTION FAILED";
+      status.style.color="var(--red)";
+    }
+    return false;
+  });
+}
+
+let audioCtx=null;
+function ensureAudio(){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;if(!audioCtx)audioCtx=new C();if(audioCtx.state==="suspended")audioCtx.resume();return audioCtx}catch(e){return null}}
+
+function beep(correct){
+  const c=ensureAudio();if(!c)return;
+  const now=c.currentTime;
+  const tones=correct?[523.25,659.25,783.99,1046.5,1318.51]:[220,174.61,146.83,110,82.41];
+  const type=correct?"sine":"square";
+  tones.forEach((f,i)=>{
+    const o=c.createOscillator(),g=c.createGain();
+    const t=now+i*(correct?.07:.075);
+    o.type=type;o.frequency.setValueAtTime(f,t);
+    g.gain.setValueAtTime(.0001,t);
+    g.gain.exponentialRampToValueAtTime(1.0,t+.012);
+    g.gain.exponentialRampToValueAtTime(.0001,t+(correct?.25:.30));
+    o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+(correct?.27:.32));
+  });
+}
+
+function fireworks(good){
+  const canvas=$("fx"),ctx=canvas.getContext("2d");
+  const dpr=Math.min(devicePixelRatio||1,2);
+  canvas.width=innerWidth*dpr;canvas.height=innerHeight*dpr;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  const cx=innerWidth/2,cy=innerHeight*.48;
+  const particles=[];
+  const count=190;
+  for(let i=0;i<count;i++){
+    const a=Math.PI*2*i/count+(Math.random()-.5)*.045;
+    const ring=i%3;
+    const speed=(ring===0?3.4:ring===1?4.8:6.0)+Math.random()*1.8;
+    particles.push({
+      x:cx,y:cy,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,
+      life:55+Math.random()*30,size:1.4+Math.random()*2.4,
+      delay:Math.random()*5
+    });
+  }
+  let frame=0;
+  function draw(){
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    particles.forEach(p=>{
+      if(frame<p.delay)return;
+      p.x+=p.vx;p.y+=p.vy;p.vy+=.055;p.vx*=.994;p.vy*=.994;p.life--;
+      if(p.life>0){
+        ctx.globalAlpha=Math.min(1,p.life/22);
+        ctx.fillStyle=good?"#18e76b":"#ff3152";
+        ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
+      }
+    });
+    ctx.globalAlpha=1;
+    if(frame++<92)requestAnimationFrame(draw);else ctx.clearRect(0,0,innerWidth,innerHeight);
+  }
+  draw();
+}
+
+function formatTime(sec){
+  sec=Math.max(0,Math.floor(Number(sec)||0));
+  if(sec>=3600){
+    const h=Math.floor(sec/3600),m=Math.floor((sec%3600)/60),ss=sec%60;
+    return h+":"+String(m).padStart(2,"0")+":"+String(ss).padStart(2,"0");
+  }
+  return String(Math.floor(sec/60)).padStart(2,"0")+":"+String(sec%60).padStart(2,"0");
+}
+
+function parseCentralDateTime(value, baseDate){
+  if(value===null || value===undefined || value==="") return NaN;
+  const v=String(value).trim();
+  if(!v) return NaN;
+
+  // ISO / normal browser date strings.
+  let t=Date.parse(v);
+  if(Number.isFinite(t)) return t;
+
+  // Common Central Sheet formats: DD/MM/YYYY HH:mm:ss, DD/MM/YYYY hh:mm AM/PM,
+  // and similar comma-separated variants.
+  let m=v.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})(?:[ ,T]+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?)?$/i);
+  if(m){
+    let day=Number(m[1]), mon=Number(m[2])-1, year=Number(m[3]);
+    if(year<100) year+=2000;
+    let hh=Number(m[4]||0), mm=Number(m[5]||0), ss=Number(m[6]||0);
+    const ap=(m[7]||"").toUpperCase();
+    if(ap){ if(hh===12) hh=0; if(ap==="PM") hh+=12; }
+    const d=new Date(year,mon,day,hh,mm,ss,0);
+    return Number.isFinite(d.getTime())?d.getTime():NaN;
+  }
+
+  // Time-only value such as 02:40 PM. Combine it with the supplied base date.
+  m=v.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+  if(m && baseDate){
+    const b=new Date(baseDate);
+    if(Number.isFinite(b.getTime())){
+      let hh=Number(m[1]), mm=Number(m[2]), ss=Number(m[3]||0);
+      const ap=(m[4]||"").toUpperCase();
+      if(ap){ if(hh===12) hh=0; if(ap==="PM") hh+=12; }
+      b.setHours(hh,mm,ss,0);
+      return b.getTime();
+    }
+  }
+  return NaN;
+}
+
+function formatCentralTimeUsed(raw,startExam,completedAt,resultDuration){
+  const maxDuration=(Number(resultDuration)>0?Number(resultDuration):DURATION);
+
+  // Best source: actual start/submission timestamps.
+  let endMs=parseCentralDateTime(completedAt);
+  let startMs=parseCentralDateTime(startExam, endMs);
+  if(Number.isFinite(startMs) && Number.isFinite(endMs)){
+    // If only clock times were supplied and the exam crossed midnight, account for it.
+    if(endMs<startMs && (startMs-endMs)<24*3600*1000) endMs+=24*3600*1000;
+    const elapsed=Math.floor((endMs-startMs)/1000);
+    if(elapsed>=0 && elapsed<=maxDuration) return formatTime(elapsed);
+  }
+
+  if(raw===null||raw===undefined||raw==="")return "—";
+
+  // New records normally arrive as seconds.
+  if(typeof raw==="number" && isFinite(raw)){
+    return raw>=0 && raw<=maxDuration ? formatTime(raw) : "—";
+  }
+
+  const v=String(raw).trim();
+  if(!v)return "—";
+
+  // Plain MM:SS or HH:MM:SS duration.
+  const parts=v.split(":").map(Number);
+  if(parts.length===2 && parts.every(Number.isFinite)){
+    const total=parts[0]*60+parts[1];
+    return total<=maxDuration && total>=0 ? formatTime(total) : "—";
+  }
+  if(parts.length===3 && parts.every(Number.isFinite)){
+    const total=parts[0]*3600+parts[1]*60+parts[2];
+    return total<=maxDuration && total>=0 ? formatTime(total) : "—";
+  }
+
+  // Some older Google Sheet date-formatted duration cells come back as an ISO
+  // date around 1899/1900. Treat only the clock portion as a duration, and only
+  // when it is within the configured exam duration.
+  const iso=v.match(/^(1899|1900)-\d{2}-\d{2}T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(?:Z)?$/i);
+  if(iso){
+    const total=Number(iso[2])*3600+Number(iso[3])*60+Number(iso[4]);
+    return total>=0 && total<=maxDuration ? formatTime(total) : "—";
+  }
+
+  return "—";
+}
+function sectionFor(q){ return "WEST BENGAL & INDIAN GEOGRAPHY • GEOGRAPHY MASTER TEST"; }
+
+function render(){if(revisionMode){$("revisionBanner")?.classList.add("show");$("timer").textContent="00:00";}else{$("revisionBanner")?.classList.remove("show");}
+  const list=revisionMode?revisionQuestions:QUESTIONS;
+  const q=list[idx],a=(revisionMode?revisionAnswers:answers)[q.id]||"";
+  const currentAnswers=revisionMode?revisionAnswers:answers;
+  const answeredCount=Object.keys(currentAnswers).filter(k=>list.some(x=>x.id===k)).length;
+  $("progress").textContent=`Question ${idx+1} of ${list.length}${revisionMode?" · REVISION TEST":""} · Attempted ${answeredCount}/${list.length}`;
+  const pf=$("progressFill");
+  if(pf){
+    const pct=Math.round(((idx+1)/list.length)*100);
+    pf.style.width=Math.max(1,pct)+"%";
+    pf.classList.toggle("done",idx>=list.length-1);
+  }
+  $("sectionLabel").textContent=sectionFor(q);
+  const ok=a===q.answer;
+  // Correct answer: no explanation is shown. Wrong answer: only the Bengali explanation is shown.
+  const fb=(a && !ok)?`<div class="explain"><div class="wrong-title">ভুল হয়েছে</div><div>${esc(q.explanation)}</div></div>`:"";
+  const btnClass=a?(ok?"answer-correct":"answer-wrong"):"";
+  $("qcard").innerHTML=`
+    <div class="qnum">Q${q.id} · ${q.kind.toUpperCase()}</div>
+    <div class="question">${esc(q.text)}</div>
+    <div class="options">${q.options.map((o,i)=>{
+      const L=letter(i);
+      let cls="opt";
+      if(a===L)cls+=" selected";
+      if(a){if(q.answer===L)cls+=" correct";else if(a===L)cls+=" wrong"}
+      return `<button type="button" class="${cls}" data-opt="${L}" ${a?"disabled":""}>
+        <span class="letter">${L}.</span><span>${esc(o)}</span></button>`;
+    }).join("")}</div>
+    ${fb?`<div class="feedback ${a?(ok?"ok":"bad"):""}">${fb}</div>`:""}
+    <div class="actions"><button id="nextBtn" class="next ${btnClass}" type="button" ${a?"":"disabled"}>${idx===list.length-1?"FINISH":"CONTINUE"}</button></div>`;
+  $("qcard").querySelectorAll("[data-opt]").forEach(el=>el.onclick=()=>choose(el.dataset.opt));
+  const nextBtn=$("nextBtn");
+  // Strong haptic feedback on the REAL EXAM CONTINUE button.
+  // Trigger vibration directly from the user's touch/pointer event so mobile browsers
+  // (including browsers opened from WhatsApp) have the best chance to honor it.
+  const continueVibrate=()=>{
+    if(revisionMode || !navigator.vibrate)return;
+    try{navigator.vibrate([140,50,140,50,220])}catch(e){}
+  };
+  nextBtn.addEventListener("pointerdown",continueVibrate,{passive:true});
+  nextBtn.onclick=()=>{
+    nextBtn.classList.remove("tap-vibrate");void nextBtn.offsetWidth;nextBtn.classList.add("tap-vibrate");
+    if(idx<list.length-1){idx++;render()}else revisionMode?finishRevision():submitExam()
+  };
+  if(a){
+    // Force the vibration animation after the button is rendered.
+    if(!ok){requestAnimationFrame(()=>{nextBtn.classList.remove("answer-wrong");void nextBtn.offsetWidth;nextBtn.classList.add("answer-wrong");});}
+  }
+  $("correctBtn").textContent=`CORRECT: ${countCorrectLive()}`;
+}
+
+function countCorrectLive(){let n=0;QUESTIONS.forEach(q=>{if(answers[q.id]===q.answer)n++});return n}
+
+function choose(L){
+  if(revisionMode){if(revisionSubmitted)return;const q=revisionQuestions[idx];if(revisionAnswers[q.id])return;revisionAnswers[q.id]=L;const ok=L===q.answer;beep(ok);fireworks(ok);render();return;}
+  if(submitted)return;const q=QUESTIONS[idx];if(answers[q.id])return;answers[q.id]=L;const ok=L===q.answer;beep(ok);fireworks(ok);render();
+}
+
+
+function startViewQuestions(){
+  const view=document.getElementById("viewScreen");
+  if(!view)return;
+
+  const list=QUESTIONS;
+  // Build the complete read-only question list in one pass.
+  // No question is clickable and no answer/state is changed.
+  view.innerHTML=`
+    <div class="viewModeWrap">
+      <div class="viewModeInner">
+        <div class="viewModeHeader">
+          <strong>VIEW QUESTIONS · ${list.length} QUESTIONS</strong>
+          <span>Scroll to read all questions</span>
+        </div>
+        <div id="viewQuestionList">
+          ${list.map(q=>`
+            <article class="viewQuestion">
+              <div class="qnum">Q${q.id} · ${esc(q.kind).toUpperCase()}</div>
+              <div class="question">${esc(q.text)}</div>
+              <div class="options">
+                ${q.options.map((o,i)=>`
+                  <div class="opt viewOnlyOpt">
+                    <span class="letter">${letter(i)}.</span>
+                    <span>${esc(o)}</span>
+                  </div>
+                `).join("")}
+              </div>
+            </article>
+          `).join("")}
+        </div>
+        <button id="closeViewQuestions" class="viewModeExit" type="button">BACK</button>
+      </div>
+    </div>`;
+
+  view.classList.remove("hidden");
+  const close=document.getElementById("closeViewQuestions");
+  if(close) close.onclick=closeViewQuestions;
+  // Always start at the top so every tap gives a predictable reading position.
+  requestAnimationFrame(()=>{
+    const wrap=view.querySelector(".viewModeWrap");
+    if(wrap)wrap.scrollTop=0;
+  });
+}
+
+function closeViewQuestions(){
+  const view=document.getElementById("viewScreen");
+  const lock=document.getElementById("lockScreen");
+  if(view)view.classList.add("hidden");
+  if(!mockUnlocked && lock)lock.classList.remove("hidden");
+}
+
+
+const MOCK_LOCK_PASSWORD="123456";
+let mockUnlocked=false;
+
+function unlockMockTest(){
+  const input=$("lockPassword");
+  const error=$("lockError");
+  const value=(input?.value||"").trim();
+
+  if(value!==MOCK_LOCK_PASSWORD){
+    if(error)error.textContent="Incorrect password.";
+    if(input){
+      input.value="";
+      input.focus();
+      input.animate(
+        [{transform:"translateX(0)"},{transform:"translateX(-7px)"},
+         {transform:"translateX(7px)"},{transform:"translateX(-5px)"},
+         {transform:"translateX(5px)"},{transform:"translateX(0)"}],
+        {duration:320}
+      );
+    }
+    try{navigator.vibrate?.([80,40,80])}catch(e){}
+    return;
+  }
+
+  mockUnlocked=true;
+  if(error)error.textContent="";
+  input.value="";
+
+  // IMPORTANT: unlocking only reveals the original START screen.
+  // It must NOT open the questions, start the exam, or alter scoreboard data.
+  $("lockScreen").classList.add("hidden");
+  $("viewScreen").classList.add("hidden");
+  $("start").classList.remove("hidden");
+  $("exam").classList.add("hidden");
+  $("result").classList.add("hidden");
+  $("admin").classList.add("hidden");
+  loadTheme();
+}
+
+function lockedViewQuestions(){
+  // Locked preview: no password, no unlock, no exam start, no scoreboard action.
+  try{
+    startViewQuestions();
+    const lock=document.getElementById("lockScreen");
+    const view=document.getElementById("viewScreen");
+    if(view)view.classList.remove("hidden");
+    if(lock)lock.classList.add("hidden");
+  }catch(err){
+    console.error("Locked VIEW QUESTIONS error:",err);
+    // Fallback: render a simple guaranteed-working question list.
+    const view=document.getElementById("viewScreen");
+    if(!view)return;
+    const list=Array.isArray(QUESTIONS)?QUESTIONS:[];
+    view.innerHTML=`
+      <div class="viewModeWrap">
+        <div class="viewModeInner">
+          <div class="viewModeHeader">
+            <strong>VIEW QUESTIONS · ${list.length} QUESTIONS</strong>
+            <span>Scroll to read all questions</span>
+          </div>
+          ${list.map((q,i)=>`
+            <article class="viewQuestion">
+              <div class="qnum">Q${q.id||i+1}</div>
+              <div class="question">${String(q.text||"")}</div>
+              <div class="options">
+                ${(q.options||[]).map((o,j)=>`
+                  <div class="opt viewOnlyOpt">
+                    <span class="letter">${String.fromCharCode(65+j)}.</span>
+                    <span>${String(o)}</span>
+                  </div>`).join("")}
+              </div>
+            </article>`).join("")}
+          <button id="closeViewQuestions" class="viewModeExit" type="button">BACK</button>
+        </div>
+      </div>`;
+    view.classList.remove("hidden");
+    document.getElementById("lockScreen")?.classList.add("hidden");
+    document.getElementById("closeViewQuestions")?.addEventListener("click",closeViewQuestions);
+  }
+}
+
+
+function initMockLock(){
+  const unlock=$("unlockBtn");
+  const view=$("lockedViewBtn");
+  const input=$("lockPassword");
+
+  if(unlock){
+    unlock.addEventListener("click",unlockMockTest);
+  }
+  if(view){
+    view.addEventListener("click",function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      lockedViewQuestions();
+    });
+    view.addEventListener("pointerup",function(e){
+      // Android/WebView can occasionally miss a synthetic click; only invoke
+      // when the button is still in the locked screen.
+      if(!mockUnlocked && e.pointerType!=="mouse"){
+        e.preventDefault();
+        e.stopPropagation();
+        lockedViewQuestions();
+      }
+    },{passive:false});
+  }
+  if(input){
+    input.addEventListener("keydown",e=>{
+      if(e.key==="Enter")unlockMockTest();
+    });
+  }
+}
+
+function startExam(){
+  const n=$("candidate").value.trim();
+  if(!n){$("candidate").focus();return}
+
+  // Start immediately from the user's tap. Do not wait for the central
+  // test registry/network, so WhatsApp/GitHub mobile launches remain smooth.
+  // The configured duration is refreshed in the background.
+  const startBtn=$("startBtn");
+  if(startBtn)startBtn.disabled=true;
+  ensureAudio();
+  candidate=n;idx=0;answers={};submitted=false;warningGiven=false;
+  startAt=Date.now();
+  examStartAt=new Date(startAt).toISOString();
+  $("start").classList.add("hidden");
+  $("result").classList.add("hidden");
+  $("admin").classList.add("hidden");
+  $("exam").classList.remove("hidden");
+  render();
+  timerHandle=setInterval(tick,250);
+  tick();
+  if(startBtn)startBtn.disabled=false;
+
+}
+
+function tick(){
+  const used=Math.floor((Date.now()-startAt)/1000),left=DURATION-used;
+  $("timer").textContent=formatTime(Math.max(0,left));
+  const lastTen=left<=600 && left>0;
+  $("timer").classList.toggle("warn",lastTen);
+  if(lastTen && !warningGiven){
+    warningGiven=true;
+    try{
+      const c=ensureAudio();
+      if(c){
+        const playWarningTone=(delay)=>{
+          setTimeout(()=>{
+            try{
+              const o=c.createOscillator(),g=c.createGain();
+              o.type="square";
+              o.frequency.setValueAtTime(880,c.currentTime);
+              o.frequency.exponentialRampToValueAtTime(660,c.currentTime+0.22);
+              g.gain.setValueAtTime(0.0001,c.currentTime);
+              g.gain.exponentialRampToValueAtTime(0.28,c.currentTime+0.015);
+              g.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+0.28);
+              o.connect(g);g.connect(c.destination);
+              o.start();o.stop(c.currentTime+0.3);
+            }catch(e){}
+          },delay);
+        };
+        playWarningTone(0);
+        playWarningTone(360);
+        playWarningTone(720);
+      }
+    }catch(e){}
+    setTimeout(()=>{if(!submitted) alert("⚠️ সতর্কবার্তা: পরীক্ষার শেষ ১০ মিনিট শুরু হয়েছে।");},50);
+  }
+  if(left<=0 && !submitted)submitExam();
+}
+
+function submitExam(){
+  if(submitted)return;submitted=true;clearInterval(timerHandle);
+  const used=Math.min(DURATION,Math.floor((Date.now()-startAt)/1000));
+  let correct=0,attempted=0;
+  QUESTIONS.forEach(q=>{if(answers[q.id]){attempted++;if(answers[q.id]===q.answer)correct++}});
+  const incorrect=attempted-correct,unanswered=QUESTIONS.length-attempted;
+  const result={
+    id:(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random()),
+    candidate,score:correct,percentage:correct/QUESTIONS.length*100,correct,incorrect,attempted,unanswered,
+    timeUsed:used,durationSeconds:DURATION,startExam:examStartAt||new Date().toISOString(),completedAt:new Date().toISOString(),answers:{...answers}
+  };
+  const arr=getResults();arr.push(result);saveResults(arr);
+  mainResult=result;
+  submitToCentralScoreboard(result);
+  startRevision(result.answers);
+}
+
+function showResult(r){
+  $("exam").classList.add("hidden");$("result").classList.remove("hidden");
+  const rows=QUESTIONS.map(q=>{
+    const a=r.answers[q.id]||"",ok=a===q.answer;
+    const your=a?`${a}. ${q.options[answerIndex(a)]}`:"Unanswered";
+    const correct=`${q.answer}. ${q.options[answerIndex(q.answer)]}`;
+    return `<div class="reviewRow"><div class="reviewQ">Q${q.id}. ${esc(q.text)}</div>
+      <div class="reviewA">Candidate's Answer: <b>${esc(your)}</b> · Correct Answer: <b>${esc(correct)}</b>
+      <span class="tag ${!a?"skip":ok?"ok":"bad"}">${!a?"UNANSWERED":ok?"CORRECT":"WRONG"}</span>
+       <div style="margin-top:8px"><div class="explain"><b>ব্যাখ্যা:</b> ${esc(q.explanation)}</div></div></div></div>`;
+  }).join("");
+  $("result").innerHTML=`<div class="resultCard">
+    <h1 class="resultTitle">MOCK TEST RESULT</h1>
+    <div class="candidate">${esc(r.candidate)}</div>
+    <div class="stats">
+      <div class="stat"><small>Total Questions</small><strong>${QUESTIONS.length}</strong></div>
+      <div class="stat"><small>Attempted</small><strong>${r.attempted}</strong></div>
+      <div class="stat"><small>Correct</small><strong>${r.correct}</strong></div>
+      <div class="stat"><small>Incorrect</small><strong>${r.incorrect}</strong></div>
+      <div class="stat"><small>Unanswered</small><strong>${r.unanswered}</strong></div>
+      <div class="stat"><small>Score</small><strong>${r.score}</strong></div>
+      <div class="stat"><small>Percentage</small><strong>${r.percentage.toFixed(2)}%</strong></div>
+      <div class="stat"><small>Time Used</small><strong>${formatTime(r.timeUsed)}</strong></div>
+    </div>
+    <div class="resultActions">
+      <button onclick="window.print()">PRINT / SAVE PDF</button>
+      <button onclick="location.reload()">BACK TO START</button>
+    </div>
+    <div class="review"><h3>ANSWER REVIEW</h3>${rows}</div>
+  </div>`;
+}
+
+function startRevision(originalAnswers){
+  revisionQuestions=QUESTIONS.filter(q=>originalAnswers[q.id] && originalAnswers[q.id]!==q.answer);
+  if(!revisionQuestions.length){revisionMode=false;clearInterval(revisionTimerHandle);showResult(mainResult);return;}
+  revisionMode=true;revisionAnswers={};revisionSubmitted=false;idx=0;revisionStartAt=Date.now();
+  $("result").classList.add("hidden");$("admin").classList.add("hidden");$("start").classList.add("hidden");$("exam").classList.remove("hidden");
+  $("timer").classList.remove("warn");$("timer").textContent="10:00";render();
+  clearInterval(revisionTimerHandle);revisionTimerHandle=setInterval(tickRevision,250);tickRevision();
+}
+function tickRevision(){if(!revisionMode||revisionSubmitted)return; const left=Math.max(0,600-Math.floor((Date.now()-revisionStartAt)/1000)); $("timer").textContent=formatTime(left); if(left<=0)finishRevision();}
+function finishRevision(){
+  if(revisionSubmitted)return;revisionSubmitted=true;clearInterval(revisionTimerHandle);
+  revisionMode=false;revisionQuestions=[];revisionAnswers={};$("revisionBanner")?.classList.remove("show");$("timer").textContent="00:00";$("timer").classList.remove("warn");
+  // Revision is practice only: no revision score/result is calculated or shown.
+  if(mainResult)showResult(mainResult);
+}
+
+let adminPasswordSession="";
+
+function adminLogin(){
+  const p=prompt("Admin Password");
+  if(p!==ADMIN_PASSWORD){
+    alert("Incorrect password.");
+    return;
+  }
+  adminPasswordSession=p;
+  $("start").classList.add("hidden");
+  $("exam").classList.add("hidden");
+  $("result").classList.add("hidden");
+  $("admin").classList.remove("hidden");
+  $("timer").textContent="75:00";
+  $("correctBtn").textContent="CORRECT: 0";
+  renderCentralAdmin();
+}
+
+function fetchCentralJson(url, attempts=3){
+  return new Promise((resolve,reject)=>{
+    let lastError=null;
+    const tryOnce=(n)=>{
+      fetch(url,{
+        method:"GET",
+        mode:"cors",
+        credentials:"omit",
+        cache:"no-store",
+        redirect:"follow"
+      }).then(async r=>{
+        const text=await r.text();
+        const clean=text.trim();
+        if(!r.ok) throw new Error("HTTP "+r.status);
+        if(!clean || clean[0]==="<" || /^<!doctype/i.test(clean)){
+          throw new Error("Central server returned HTML instead of JSON.");
+        }
+        try{
+          resolve(JSON.parse(clean));
+        }catch(e){
+          throw new Error("Central server returned invalid JSON.");
+        }
+      }).catch(err=>{
+        lastError=err;
+        if(n<attempts){
+          setTimeout(()=>tryOnce(n+1),700*n);
+        }else{
+          reject(lastError||new Error("Connection failed."));
+        }
+      });
+    };
+    tryOnce(1);
+  });
+}
+
+function saveCentralAdminCache(data){
+  try{
+    localStorage.setItem(
+      CENTRAL_ADMIN_CACHE_KEY,
+      JSON.stringify({savedAt:Date.now(),data:data})
+    );
+  }catch(e){}
+}
+
+function getCentralAdminCache(){
+  try{
+    const x=JSON.parse(localStorage.getItem(CENTRAL_ADMIN_CACHE_KEY)||"null");
+    return x&&Array.isArray(x.data)?x:null;
+  }catch(e){return null}
+}
+
+function renderCentralAdmin(){
+  const wrap=$("adminTable");
+  wrap.innerHTML='<div class="empty">Loading CENTRAL SCOREBOARD…</div>';
+
+  fetchCentralJson(CENTRAL_SCOREBOARD_URL+"?action=results&_="+Date.now(),3)
+    .then(data=>{
+      if(!data.ok)throw new Error(data.error||"Unable to load results.");
+      const results=Array.isArray(data.results)?data.results:[];
+      saveCentralAdminCache(results);
+      renderCentralAdminShell(results);
+    })
+    .catch(err=>{
+      const cached=getCentralAdminCache();
+      if(cached){
+        renderCentralAdminShell(cached.data);
+        wrap.insertAdjacentHTML(
+          "afterbegin",
+          '<div class="empty" style="padding:8px 0;color:var(--gold)">CENTRAL SERVER TEMPORARILY UNAVAILABLE — showing the last successfully loaded results. Tap REFRESH RESULTS to try again.</div>'
+        );
+      }else{
+        wrap.innerHTML='<div class="empty">CENTRAL SCOREBOARD TEMPORARILY UNAVAILABLE: '+esc(err.message||"Connection failed.")+'<br><br>Tap REFRESH RESULTS to try again.</div>';
+      }
+    });
+}
+
+function renderCentralAdminShell(results){
+  const wrap=$("adminTable");
+
+  wrap.innerHTML=`
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
+      <div style="font-weight:1000">CENTRAL SCOREBOARD</div>
+      <button id="centralRefreshBtn" style="border:1px solid #444;border-radius:11px;padding:10px 13px;background:#111;color:#fff;font-weight:900">REFRESH RESULTS</button>
+    </div>
+    <div id="centralTestInfo" style="margin:6px 0 12px;color:var(--muted);font-weight:800">
+      All HTML exam results are stored in this single scoreboard.
+    </div>
+    <div id="centralResultsArea"></div>
+  `;
+
+  $("centralRefreshBtn").onclick=renderCentralAdmin;
+  renderCentralResults(results||[]);
+}
+
+function renderCentralResults(results){
+  const area=$("centralResultsArea");
+  if(!area)return;
+
+  if(!results.length){
+    area.innerHTML='<div class="empty">No results found.</div>';
+    return;
+  }
+
+  area.innerHTML=`
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Candidate Name</th>
+            <th>Scored</th>
+            <th>Exam Start</th>
+            <th>Exam End</th>
+            <th>Time Used (Minutes)</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${results.map(r=>`
+            <tr>
+              <td>${esc(r.date||"")}</td>
+              <td>${esc(r.candidateName||"")}</td>
+              <td>${esc(r.scored==null?"":r.scored)}</td>
+              <td>${esc(r.examStart||"")}</td>
+              <td>${esc(r.examEnd||"")}</td>
+              <td>${esc(r.timeUsed||"")}</td>
+              <td>${esc(r.percentage||"")}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function downloadCSV(){
+  const rows=document.querySelectorAll("#centralResultsArea table tbody tr");
+  if(!rows.length){alert("No Central results to download.");return}
+
+  const lines=[
+    ["Date","Candidate Name","Scored","Exam Start","Exam End","Time Used (Minutes)","Percentage"]
+  ];
+
+  rows.forEach(tr=>{
+    lines.push(Array.from(tr.cells).map(td=>td.textContent.trim()));
+  });
+
+  const txt="\uFEFF"+lines.map(row=>
+    row.map(v=>`"${String(v).replaceAll('"','""')}"`).join(",")
+  ).join("\r\n");
+
+  const blob=new Blob([txt],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="Central_Scoreboard_Results.csv";
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+function toggleTheme(){
+  document.body.classList.toggle("light");
+  localStorage.setItem("ctet_mock_theme",document.body.classList.contains("light")?"light":"dark");
+  $("themeBtn").textContent=document.body.classList.contains("light")?"☾ DARK":"☀ THEME";
+}
+function loadTheme(){
+  const light=localStorage.getItem("ctet_mock_theme")==="light";
+  document.body.classList.toggle("light",light);$("themeBtn").textContent=light?"☾ DARK":"☀ THEME";
+}
+
+$("startBtn").onclick=startExam;
+$("candidate").addEventListener("keydown",e=>{if(e.key==="Enter")startExam()});
+$("themeBtn").onclick=toggleTheme;
+$("viewBtn").onclick=()=>{if(mockUnlocked)startViewQuestions()};
+$("adminBtn").onclick=adminLogin;
+$("refreshAdmin").onclick=renderCentralAdmin;
+$("csvAdmin").onclick=downloadCSV;
+$("printAdmin").onclick=()=>window.print();
+$("clearAdmin").onclick=()=>{
+  alert("Central Scoreboard data is stored in Google Sheet. To preserve all previous results, this portal does not delete them.");
+};
+loadTheme();
+initMockLock();
+</script>
+<script id="REAL_EXAM_LAST10_TIMER_ONLY_SCRIPT">
+(function(){
+  function update(){
+    var t=document.getElementById('timer');
+    if(!t)return;
+    if(typeof revisionMode!=='undefined' && revisionMode){
+      t.classList.remove('real-exam-last10');
+      return;
+    }
+    var s=(t.textContent||'').trim();
+    var m=s.match(/^(\d{1,2}):(\d{2})$/);
+    if(!m){
+      t.classList.remove('real-exam-last10');
+      return;
+    }
+    var seconds=parseInt(m[1],10)*60+parseInt(m[2],10);
+    if(seconds>0 && seconds<=600){
+      t.classList.add('real-exam-last10');
+    }else{
+      t.classList.remove('real-exam-last10');
+    }
+  }
+  setInterval(update,100);
+  document.addEventListener('DOMContentLoaded',update);
+})();
+</script>
+</body>
+</html>
